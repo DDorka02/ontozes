@@ -11,12 +11,7 @@ class Feladatok:
         def __init__(self):
                 self.ev3 = EV3Brick()
                 self.m = Motor(Port.A)
-                #self.cs = ColorSensor(Port.S3)
-
                 
-        def fel(self):
-                self.m.run(150)
-
         def le(self):
                 self.m.run(-150)
 
@@ -27,12 +22,6 @@ class Feladatok:
                                 wait(500)
                                 self.ev3.speaker.play_file("water.wav")
 
-        def ontozes2(self):
-                while True:
-		        if self.cs.reflection() > 17:
-                                self.le()
-                                wait(500)
-                self.ev3.speaker.play_file("water.wav")
 
         def csipog(self):
                 self.ev3.speaker.beep()

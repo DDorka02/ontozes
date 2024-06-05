@@ -10,7 +10,6 @@ import Feladatok
 ontozo = Feladatok.Feladatok()
 
 ontozo.ontozes1()
-# ontozo.ontozes2()
 
 
 ontozo.csipog()
