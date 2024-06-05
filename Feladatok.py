@@ -13,15 +13,15 @@ class Feladatok:
                 self.m = Motor(Port.A)
                 
         def le(self):
-                self.m.run(-150)
+                self.m.run(-200)
 
-        def ontozes1(self):
+        def ontozes(self):
                 while(True):
                         if self.ev3.buttons.pressed()==[Button.UP]:
                                 self.le()
                                 wait(500)
-                                self.ev3.speaker.play_file("water.wav")
-
+                                logikai= False
+                                self.m.stop(Stop.BRAKE)   
 
         def csipog(self):
                 self.ev3.speaker.beep()
